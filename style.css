@@ -31,28 +31,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .preview-card {
   background-color: var(--card-bg);
   display: flex;
   flex-direction: column;
-  width: 20rem;
-  height: 50%;
-  padding: 1em;
+  align-items: center;
+  width: 22rem;
+  height: 60%;
+  padding: 1.7rem 2rem;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .container-image {
   background-image: url("images/image-equilibrium.jpg");
-  height: 18em;
-  width: 18em;
+  height: 19em;
+  width: 19.2em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.5em;
   position: relative;
+  transition: ease-in-out 0.2s;
 }
 
 .container-image::after {
@@ -62,9 +64,10 @@ body {
   left: 8em;
   content: url("images/icon-view.svg");
   opacity: 0;
+  transition: ease-in-out 0.2s;
 }
 
-.container-image::before{
+.container-image::before {
   position: absolute;
   content: " ";
   background-color: var(--clr-cyan);
@@ -72,14 +75,17 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 0.5em;
+  transition: ease-in-out 0.2s;
 }
 
 .container-image:hover::after {
   opacity: 1;
+  transition: ease-in-out 0.2s;
 }
 
-.container-image:hover::before{
+.container-image:hover::before {
   opacity: 0.6;
+  transition: ease-in-out 0.2s;
 }
 
 .image {
@@ -90,8 +96,14 @@ body {
   cursor: pointer;
 }
 
+.content {
+  width: 100%;
+  text-align: left;
+}
+
 h1.product {
-  font: 600 2em/1.1 "Outfit", sans-serif;
+  font: 600 1.5rem/1.1 "Outfit", sans-serif;
+  text-align: left;
   margin: 0.8em 0px;
   color: var(--clr-white);
   cursor: pointer;
@@ -105,8 +117,9 @@ p.text {
 
 .info {
   display: flex;
+  text-align: left;
   justify-content: space-between;
-  margin-block-end: 1em;
+  margin: 2em 0;
   position: relative;
 }
 
@@ -118,7 +131,7 @@ p.text {
 }
 
 span.price {
-  font: 400 1em "Outfit", sans-serif;
+  font: 600 0.9em "Outfit", sans-serif;
   color: var(--clr-cyan);
 }
 
@@ -127,14 +140,12 @@ span.time {
   color: var(--clr-soft-blue);
 }
 
-.info::after {
-  content: "";
-  position: absolute;
+.deco {
   display: block;
   height: 2px;
   width: 100%;
   background: var(--clr-deco);
-  bottom: -1.2em;
+  margin-block-end: 1em;
 }
 
 span.creator {
@@ -143,7 +154,6 @@ span.creator {
 }
 
 .info-creator {
-  margin-block-start: 2em;
   display: flex;
   align-items: center;
 }
@@ -153,16 +163,20 @@ span.creator {
   margin-right: 10px;
   width: 36px;
   height: 36px;
+  border-radius: 50%;
+  outline: 2px solid var(--clr-white);
 }
 
 .creator a {
   color: var(--clr-white);
   cursor: pointer;
+  font-weight: 400;
 }
 
 .creator a:hover,
 h1:hover {
   color: var(--clr-cyan);
+  transition: ease-in-out 0.2s;
 }
 
 .attribution {
