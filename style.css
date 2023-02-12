@@ -1,0 +1,147 @@
+body,
+span,
+h1,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+
+  --body-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --clr-deco: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--body-bg);
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-card {
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 50%;
+  padding: 1em;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image{
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+h1.product {
+  font: 600 2em/1.1 "Outfit", sans-serif;
+  margin: 0.8em 0px;
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+p.text {
+  font: 400 1em "Outfit", sans-serif;
+  color: var(--clr-soft-blue);
+  margin-block-end: 1em;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 1em;
+  position: relative;
+}
+
+.price img,
+.time img {
+  display: inline;
+  margin-right: 5px;
+  vertical-align: sub;
+}
+
+span.price {
+  font: 400 1em "Outfit", sans-serif;
+  color: var(--clr-cyan);
+}
+
+span.time {
+  font: 400 1em "Outfit", sans-serif;
+  color: var(--clr-soft-blue);
+}
+
+.info::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--clr-deco);
+  bottom: -1.2em;
+}
+
+span.creator {
+  font: 300 1em "Outfit", sans-serif;
+  color: var(--clr-soft-blue);
+}
+
+.info-creator {
+  margin-block-start: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.info-creator img {
+  display: block;
+  margin-right: 10px;
+  vertical-align: bottom;
+  width: 36px;
+  height: 36px;
+}
+
+.creator a {
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+.creator a:hover, h1:hover{
+  color: var(--clr-cyan);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  font-size: 0.75em;
+  color: var(--clr-soft-blue);
+}
+
+.attribution a {
+  color: var(--clr-cyan);
+}
+
+@media (max-width: 40rem) {
+  footer {
+    display: none;
+  }
+}
